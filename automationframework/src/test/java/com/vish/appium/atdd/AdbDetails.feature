@@ -23,12 +23,9 @@ Feature: Detecting Android Devices
 * I should be able to get my Android device details through the framework
 * In order to use that information for automation of mobile apps.
 
-Scenario: If a device is connected
+Scenario: Get device details
 Given 1 android device with id "b3018009" is connected
 When I check for available android devices
-Then the output should contain "Mi4"
-
-Scenario: If no device is connected
-Given 0 android devices are connected
-When I check for available android devices
-Then no output should be returned
+Then the output should contain "mi4"
+	And the output should contain "6.0.1"
+	And the output should contain "rooted"

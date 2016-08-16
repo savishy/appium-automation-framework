@@ -24,5 +24,10 @@ public class Device {
 		this.name = name;
 		this.rooted = rooted;
 	}
+	
+	@Override
+	public String toString() {
+		return "Name: " + name + "; ID: " + id + "; Android " + os + (rooted? "; rooted" : "");	
+	}
 
 }

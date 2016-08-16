@@ -33,7 +33,7 @@ public class AdbStepDefs {
 	public void the_output_should_contain(String arg1) throws Throwable {
 		Assert.assertTrue("output size is zero", devices.size() > 0);
 		for (Device d : devices) {
-			if (d.getName().equals(arg1)) return;
+			if (d.toString().contains(arg1)) return;
 		}
 		Assert.fail("the output does not contain " + arg1);
 	}
